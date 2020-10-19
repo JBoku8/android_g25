@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Cross Game G-25</string>
+    <string name="restartButtonText">Restart Game</string>
+    <string name="messageText">Winner is %s</string>
 </resources>
