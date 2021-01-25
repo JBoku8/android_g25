@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Email_Password_Firebase_G25</string>
+    <string name="sign_in_button">შესვლა</string>
+    <string name="sign_up_button">რეგისტრაცია</string>
+    <string name="reset_password">პაროლის აღდგენა</string>
+    <string name="forgot_password">დაგავიწყდათ პაროლი?</string>
+    <string name="new_password">ახალი პაროლი</string>
+    <string name="emailInputHint">ელ.ფოსტა</string>
+    <string name="passwordInputHint">პაროლი</string>
+    <string name="messageTextView">ან</string>
+    <string name="goBack">უკან</string>
+    <string name="updateProfile">პროფილის რედაქტირება</string>
+    <string name="logOut">სისტემიდან გასვლა</string>
+    <string name="confirmPassword">პაროლის შეცვლა</string>
+</resources>

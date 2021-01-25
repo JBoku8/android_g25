@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "302411621401",
+    "project_id": "email-password-g25",
+    "storage_bucket": "email-password-g25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302411621401:android:dfadbb505e0b5d8ee07688",
+        "android_client_info": {
+          "package_name": "com.example.email_password_firebase_g25"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302411621401-cn9khnei5lueq61n7tilqpbbc266s86l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTHQ1Eh5mmtbSZ7EjqE0_K0V9X5UckLN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302411621401-cn9khnei5lueq61n7tilqpbbc266s86l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
