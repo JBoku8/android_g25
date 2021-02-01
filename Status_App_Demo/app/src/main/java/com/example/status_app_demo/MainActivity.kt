@@ -106,11 +106,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showActionDialog() {
-        val editText = EditText(this)
+
+        val view = layoutInflater.inflate(R.layout.add_dialog, null)
+        val displayNameEditText = view.findViewById<EditText>(R.id.displayNameEditText)
+        val stateEditText = view.findViewById<EditText>(R.id.stateEditText)
 
         val dialog = AlertDialog.Builder(this)
                 .setTitle("Update your state")
-                .setView(editText)
+                .setView(view)
                 .setNegativeButton("Cancel", null)
                 .setPositiveButton("OK", null)
                 .show()
@@ -119,8 +122,9 @@ class MainActivity : AppCompatActivity() {
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener {
             Log.i(Constants.MAIN_ACTIVITY_TAG, "Clicked on positive button!")
 
-            val stateText = editText.text.toString()
-            if (stateText.isBlank()) {
+            val displayName = displayNameEditText.text.toString()
+            val stateText = stateEditText.text.toString()
+            if (displayName.isBlank() || stateText.isBlank()) {
                 Toast.makeText(this, "Cannot submit empty text", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -130,8 +134,14 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            db.collection("users").document(currentUser.uid)
-                    .update("state", stateText)
+            val newUser = User(displayName, stateText)
+            db.collection("users").add(newUser).addOnSuccessListener { task ->
+                Log.i("MAIN_ACTIVITY_OK", "User added")
+            }.addOnFailureListener{
+                    e ->
+                Log.e("MAIN_ACTIVITY_EX", e.message.toString())
+            }
+
             dialog.dismiss()
         }
     }
